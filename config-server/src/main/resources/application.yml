@@ -1,0 +1,26 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  security:
+    user:
+      name: ${CONFIG_SERVER_USERNAME:config-admin}
+      password: ${CONFIG_SERVER_PASSWORD:config-admin}
+  profiles:
+    active: native,local
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: https://github.com/tahirdotz/Springboot-Banking-System-config-repo
+          default-label: main
+          clone on-start: true
+          timeout: 10s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics

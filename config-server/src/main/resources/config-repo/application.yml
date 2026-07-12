@@ -1,0 +1,8 @@
+# Shared baseline configuration served to every microservice by the config server.
+# Add a file named after each service's spring.application.name (e.g. auth-service.yml)
+# to layer service-specific overrides on top of this shared file.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
