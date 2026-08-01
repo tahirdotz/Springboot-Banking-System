@@ -18,6 +18,7 @@
 	<modules>
 		<module>../config-server</module>
 		<module>../api-gateway</module>
+		<module>../auth-service</module>
 		<!-- add each of these once its folder actually exists:
 		<module>../account-service</module>
 		<module>../transaction-service</module>
